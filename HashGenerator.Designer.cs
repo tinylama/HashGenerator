@@ -40,9 +40,9 @@
             this.hashTypeLabel = new System.Windows.Forms.Label();
             this.hashTypesCombo = new System.Windows.Forms.ComboBox();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.passwordTextbox = new System.Windows.Forms.TextBox();
-            this.passwordLabel = new System.Windows.Forms.Label();
             this.generateSaltButton = new System.Windows.Forms.PictureBox();
+            this.passwordLabel = new System.Windows.Forms.Label();
+            this.passwordTextbox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.hashTypePanel.SuspendLayout();
             this.mainPanel.SuspendLayout();
@@ -177,6 +177,26 @@
             this.mainPanel.Size = new System.Drawing.Size(384, 146);
             this.mainPanel.TabIndex = 0;
             // 
+            // generateSaltButton
+            // 
+            this.generateSaltButton.Image = ((System.Drawing.Image)(resources.GetObject("generateSaltButton.Image")));
+            this.generateSaltButton.Location = new System.Drawing.Point(137, 52);
+            this.generateSaltButton.Name = "generateSaltButton";
+            this.generateSaltButton.Size = new System.Drawing.Size(16, 16);
+            this.generateSaltButton.TabIndex = 9;
+            this.generateSaltButton.TabStop = false;
+            this.generateSaltButton.Click += new System.EventHandler(this.GenerateSalt);
+            // 
+            // passwordLabel
+            // 
+            this.passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.passwordLabel.AutoSize = true;
+            this.passwordLabel.Location = new System.Drawing.Point(159, 55);
+            this.passwordLabel.Name = "passwordLabel";
+            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
+            this.passwordLabel.TabIndex = 8;
+            this.passwordLabel.Text = "Password";
+            // 
             // passwordTextbox
             // 
             this.passwordTextbox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -190,26 +210,6 @@
             this.passwordTextbox.TabIndex = 7;
             this.passwordTextbox.TextChanged += new System.EventHandler(this.PasswordChanged);
             // 
-            // passwordLabel
-            // 
-            this.passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.passwordLabel.AutoSize = true;
-            this.passwordLabel.Location = new System.Drawing.Point(159, 55);
-            this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(53, 13);
-            this.passwordLabel.TabIndex = 8;
-            this.passwordLabel.Text = "Password";
-            // 
-            // generateSaltButton
-            // 
-            this.generateSaltButton.Image = ((System.Drawing.Image)(resources.GetObject("generateSaltButton.Image")));
-            this.generateSaltButton.Location = new System.Drawing.Point(137, 52);
-            this.generateSaltButton.Name = "generateSaltButton";
-            this.generateSaltButton.Size = new System.Drawing.Size(16, 16);
-            this.generateSaltButton.TabIndex = 9;
-            this.generateSaltButton.TabStop = false;
-            this.generateSaltButton.Click += new System.EventHandler(this.GenerateSalt);
-            // 
             // HashGeneratorForm
             // 
             this.AcceptButton = this.generateButton;
@@ -218,10 +218,10 @@
             this.ClientSize = new System.Drawing.Size(384, 146);
             this.Controls.Add(this.mainPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(400, 185);
             this.MinimumSize = new System.Drawing.Size(400, 185);
             this.Name = "HashGeneratorForm";
-            this.ShowIcon = false;
             this.Text = "Hash Generator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
